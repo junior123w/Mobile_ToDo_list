@@ -3,6 +3,16 @@
     <string name="due_date">due date</string>
     <string name="task">Task</string>
     <string name="button_text_edit">Edit</string>
+    <string name="label_name_3">Mark as Completed:</string>
+    <string name="ButtonText1">Update</string>
+    <string name="ButtonText2">Delete</string>
+    <string name="ButtonText3">Cancel</string>
+    <string name="labelText1">Set Due Date</string>
+    <string name="labelText2">"Due Date : "</string>
+    <string name="hint1">Enter Task Name</string>
+    <string name="hint2">Enter Task Notes</string>
+    <string name="label4">Task Name:</string>
+    <string name="label5">Notes:</string>
     <string name="headingText">To-Do List!</string>
     <string name="add_task">Add a Task</string>
 </resources>

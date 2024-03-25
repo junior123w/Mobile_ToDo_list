@@ -1,0 +1,158 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor">
+
+    <!-- Task Name -->
+
+    <TextView
+        android:id="@+id/todoNameTextView"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="274dp"
+        android:fontFamily="monospace"
+        android:text="@string/label4"
+        android:textSize="@dimen/duedateTextSize" />
+
+    <EditText
+        android:id="@+id/todoNameEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todoNameTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
+        android:hint="@string/hint1"
+        android:inputType="text" />
+
+    <!-- Task Notes -->
+
+    <TextView
+        android:id="@+id/notesLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/todoNameEditText"
+        android:layout_marginTop="3dp"
+        android:text="@string/label5"
+        android:textSize="@dimen/duedateTextSize" />
+
+    <EditText
+        android:id="@+id/notesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notesLabelTextView"
+        android:layout_marginStart="@dimen/layoutMargins"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="@dimen/layoutMargins"
+        android:fontFamily="monospace"
+        android:hint="@string/hint2"
+        android:minLines="3" />
+
+    <!-- Action Buttons -->
+
+    <Button
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notesEditText"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="13dp"
+        android:layout_toEndOf="@id/updateButton"
+        android:backgroundTint="#FFA500"
+        android:fontFamily="monospace"
+        android:text="@string/ButtonText2"
+        android:textColor="@color/black" />
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notesEditText"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#FFA500"
+        android:fontFamily="monospace"
+        android:text="@string/ButtonText1"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notesEditText"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="@color/ButtonColor"
+        android:fontFamily="monospace"
+        android:text="@string/ButtonText3"
+        android:textColor="@color/black" />
+    <!--Due-date Text and Switch -->
+
+    <Switch
+        android:id="@+id/dueDateSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/calendarView"
+        android:layout_alignBaseline="@id/dueDateLabelTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="-1dp"
+        android:fontFamily="monospace"
+        android:text="@string/labelText1"
+        android:textSize="@dimen/duedateTextSize" />
+
+    <TextView
+        android:id="@+id/dueDateLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cancelButton"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:text="@string/labelText2"
+        android:textSize="@dimen/duedateTextSize" />
+
+
+
+    <!-- Mark as Completed Text and Switch -->
+
+    <TextView
+        android:id="@+id/completedLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarView"
+        android:layout_marginTop="4dp"
+        android:fontFamily="monospace"
+        android:text="@string/label_name_3"
+        android:textSize="@dimen/duedateTextSize" />
+
+    <Switch
+        android:id="@+id/completedSwitch"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/calendarView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="16dp"
+        android:layout_toEndOf="@id/completedLabelTextView" />
+
+    <!-- CalendarView for Due Date -->
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dueDateLabelTextView"
+        android:layout_marginStart="@dimen/layoutMargins"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="@dimen/layoutMargins" />
+
+
+
+
+</RelativeLayout>
