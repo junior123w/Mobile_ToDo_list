@@ -35,7 +35,6 @@
         android:id="@+id/notesLabelTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/buttonPadding"
         android:layout_below="@id/todoNameEditText"
         android:layout_marginTop="3dp"
         android:text="@string/label5"
@@ -112,7 +111,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/cancelButton"
-        android:layout_marginLeft="@dimen/buttonPadding"
         android:layout_marginTop="16dp"
         android:fontFamily="monospace"
         android:text="@string/labelText2"
@@ -127,19 +125,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/calendarView"
-        android:layout_marginLeft="@dimen/buttonPadding"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="monospace"
         android:text="@string/label_name_3"
         android:textSize="@dimen/duedateTextSize" />
 
     <Switch
         android:id="@+id/completedSwitch"
-        android:layout_width="103dp"
-        android:layout_height="38dp"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/calendarView"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="94dp"
+        android:layout_marginStart="22dp"
         android:layout_marginTop="0dp"
         android:layout_marginEnd="22dp"
         android:layout_marginBottom="16dp"
@@ -148,18 +145,14 @@
     <!-- CalendarView for Due Date -->
     <CalendarView
         android:id="@+id/calendarView"
-        style="@android:style/Widget.Material.CalendarView"
-        android:layout_width="374dp"
-        android:layout_height="326dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@id/dueDateLabelTextView"
         android:layout_marginStart="@dimen/layoutMargins"
         android:layout_marginTop="1dp"
-        android:layout_marginEnd="@dimen/layoutMargins"
-        android:dateTextAppearance="@style/TextAppearance.AppCompat.Large"
-        android:focusedMonthDateColor="@color/black"
-        android:selectedDateVerticalBar="@color/backgroundColor"
-        android:selectedWeekBackgroundColor="@color/backgroundColor"
-        android:unfocusedMonthDateColor="@color/gray"
-        android:weekDayTextAppearance="@style/TextAppearance.AppCompat.Large" />
+        android:layout_marginEnd="@dimen/layoutMargins" />
+
+
+
 
 </RelativeLayout>

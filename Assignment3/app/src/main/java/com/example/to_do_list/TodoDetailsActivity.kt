@@ -15,9 +15,9 @@ class TodoDetailsActivity:AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding=ActivityTodoDetailsBinding.inflate(layoutInflater)
+        binding = ActivityTodoDetailsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         // Closing TodoDetailsActivity when "Cancel" button is clicked
-       // binding.cancelButton.setOnClickListener { finish() }
+        binding.cancelButton.setOnClickListener { finish() }
     }
 }
