@@ -2,13 +2,13 @@ package com.example.to_do_list2
 
 import android.content.Context
 import android.content.Intent
-import android.icu.text.SimpleDateFormat
 import android.os.Build
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.to_do_list2.databinding.ActivityTodoListBinding
+import java.text.SimpleDateFormat
 
 class ToDoAdapter(private val context: Context, private val items: List<Tasks>) :
     RecyclerView.Adapter<ToDoAdapter.ViewHolder>() {
@@ -24,7 +24,7 @@ class ToDoAdapter(private val context: Context, private val items: List<Tasks>) 
 
         // Bind data to views
         holder.binding.taskName.text = item.name
-        holder.binding.dueDate.text = item.dueDate
+        holder.binding.dueDate.text = SimpleDateFormat("yyyy-MM-dd").format(item.dueDate.toDate())
 
         // OnClickListener for editButton -> jump to ToDoDetailsActivity
         holder.binding.editButton.setOnClickListener {

@@ -20,14 +20,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-        context = this // Initializing context with the current activity's context
-
-        //added  intent for FAB so that it can access the other xml file
-        binding.addTaskFAB.setOnClickListener{
-            val intent = Intent(context, TodoDetailsActivity::class.java)
-            context.startActivity(intent)
-        }
     }
-
 }

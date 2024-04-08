@@ -15,4 +15,7 @@
     <string name="label5">Notes:</string>
     <string name="headingText">To-Do List!</string>
     <string name="add_task">Add a Task</string>
+    <string name="CancelButtonText">Cancel</string>
+    <string name="SaveButtonText">Save</string>
+    <string name="label6">New Task Name</string>
 </resources>

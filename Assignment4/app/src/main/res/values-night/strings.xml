@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="CancelButtonText">Cancel</string>
+    <string name="SaveButtonText">Save</string>
+    <string name="label6">New Task Name</string>
+</resources>
