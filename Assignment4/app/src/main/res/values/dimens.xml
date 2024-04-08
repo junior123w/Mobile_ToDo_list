@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="duedateTextSize">18sp</dimen>
+    <dimen name="taskNameTextSize">20sp</dimen>
+    <dimen name="buttonPadding">12dp</dimen>
+    <dimen name="layoutMargins"> 16dp</dimen>
+    <dimen name="layoutStartEnd">18dp</dimen>
+    <dimen name="marginBetween">50dp</dimen>
+    <dimen name="headingTextSize">60sp</dimen>
+</resources>
