@@ -37,5 +37,10 @@ class ToDoAdapter(private val context: Context, private val items: List<Tasks>) 
         return items.size
     }
 
+    fun addTodo(todo: Tasks) {
+        notifyItemInserted(items.size - 1)
+    }
+
+
     inner class ViewHolder(val binding: ActivityTodoListBinding) : RecyclerView.ViewHolder(binding.root)
 }

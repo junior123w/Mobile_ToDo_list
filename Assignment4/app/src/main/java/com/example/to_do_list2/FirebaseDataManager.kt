@@ -19,13 +19,13 @@ class FirebaseDataManager {
                 onComplete(emptyList())
             }
     }
-    fun saveTodo(todo: Tasks, onComplete: (Boolean) -> Unit) {
+    fun saveTodo(todo: Tasks, onComplete: (Boolean,Exception?) -> Unit) {
         collectionref.add(todo)
             .addOnSuccessListener {
-                onComplete(true)
+                onComplete(true,null)
             }
-            .addOnFailureListener { _ ->
-                onComplete(false)
+            .addOnFailureListener { error ->
+                onComplete(false,error)
             }
     }
 }

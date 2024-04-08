@@ -4,6 +4,7 @@ import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.to_do_list2.databinding.ActivityMainBinding
@@ -26,6 +27,8 @@ class   ToDoListActivity : AppCompatActivity() {
 
         val firestore = FirebaseDataManager()
         firestore.getTasks { tasks ->
+            todoList.clear()
+            todoList.addAll(tasks)
             val recyclerView = binding.RecyclerView
             recyclerView.layoutManager = LinearLayoutManager(this)
             todoAdapter = ToDoAdapter(this, tasks)
@@ -55,12 +58,15 @@ class   ToDoListActivity : AppCompatActivity() {
                 val newTodo = Tasks(name = newTodoName)
                 val firestore =FirebaseDataManager()
                 // Call a method in FirebaseDataManager to save the new todo
-                firestore.saveTodo(newTodo) { success ->
+                firestore.saveTodo(newTodo) { success,error ->
                     if (success) {
-                        // Refresh the RecyclerView
-                        todoAdapter.notifyDataSetChanged()
+                        todoList.add(newTodo)
+
+                        this.todoAdapter.notifyItemInserted(todoList.size - 1)
+
                     } else {
                         // Handle the error
+                        handleSaveError(error)
                     }
                 }
                 dialog.dismiss()
@@ -72,5 +78,11 @@ class   ToDoListActivity : AppCompatActivity() {
         }
 
         dialog.show()
+
     }
+
+    private fun handleSaveError(error:Exception?) {
+        Toast.makeText(this, "Error saving todo: $error", Toast.LENGTH_SHORT).show()
+    }
+
 }
