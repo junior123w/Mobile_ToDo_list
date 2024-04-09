@@ -1,5 +1,11 @@
 package com.example.to_do_list2
-
+/*
+* Name: Naimil Shah
+* Student id : 200522618
+* File name: Main activity
+* Date:08-04-2024
+*  Description : This file is there to manage the data that is organized in the todo list
+* Version : V 2.0*/
 import android.content.Context
 import android.content.Intent
 import android.os.Build

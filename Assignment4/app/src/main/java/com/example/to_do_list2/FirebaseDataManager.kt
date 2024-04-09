@@ -1,5 +1,11 @@
 package com.example.to_do_list2
-
+/*
+* Name: Naimil Shah
+* Student id : 200522618
+* File name: Firebase Datamanager
+* Date:08-04-2024
+*  Description : This file is used to manage data that flows to and from firebase
+* Version : V 2.0*/
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.toObject
 

@@ -3,9 +3,9 @@ package com.example.to_do_list2
 * Name: Naimil Shah
 * Student id : 200522618
 * File name: Main activity
-* Date:24-03-2024
-*  Description : This is a task tracker app that will keep of task that you can create edit and delete
-* Version : V 1.0*/
+* Date:08-04-2024
+*  Description : This is a task tracker app that will keep of task that you can create
+* Version : V 2.0*/
 
 import android.content.Context
 import android.content.Intent
