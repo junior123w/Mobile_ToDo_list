@@ -13,7 +13,7 @@ import com.google.firebase.FirebaseApp
 
 class   ToDoListActivity : AppCompatActivity() {
 
-    private lateinit var todoAdapter: ToDoAdapter
+    private lateinit var todolistAdapter: ToDoListAdapter
     private val todoList: MutableList<Tasks> = mutableListOf()
     private lateinit var binding: ActivityMainBinding
 
@@ -31,8 +31,8 @@ class   ToDoListActivity : AppCompatActivity() {
             todoList.addAll(tasks)
             val recyclerView = binding.RecyclerView
             recyclerView.layoutManager = LinearLayoutManager(this)
-            todoAdapter = ToDoAdapter(this, tasks)
-            recyclerView.adapter = todoAdapter
+            todolistAdapter = ToDoListAdapter(this,todoList)
+            recyclerView.adapter = todolistAdapter
         }
         binding.addTaskFAB.setOnClickListener {
             showNewTodoDialog()
@@ -62,7 +62,7 @@ class   ToDoListActivity : AppCompatActivity() {
                     if (success) {
                         todoList.add(newTodo)
 
-                        this.todoAdapter.notifyItemInserted(todoList.size - 1)
+                        this.todolistAdapter.notifyItemInserted(todoList.size - 1)
 
                     } else {
                         // Handle the error
